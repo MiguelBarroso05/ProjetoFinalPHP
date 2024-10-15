@@ -1,3 +1,7 @@
+<?php 
+include 'Connections/config.php';
+include 'Functions/index.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

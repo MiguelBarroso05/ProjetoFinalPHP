@@ -1,6 +1,6 @@
 <div class="container  mt-5 ">
     <div class="d-flex justify-content-center">
-        <form style="width: 100%; max-width: 400px;">
+        <form style="width: 100%; max-width: 400px;" method="post">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Name</label>
                 <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -22,14 +22,14 @@
                 <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
                 <input name="password_check" type="password" class="form-control" id="exampleInputPassword1">
             </div>
-            <select id="districtSelect" class="form-select mb-3" aria-label="Default select example">
+            <select name="district" id="districtSelect" class="form-select mb-3" aria-label="Default select example">
                 <option disabled selected>Select a District</option>
                 <?php
                 getDistricts()
                 ?>
             </select>
-            <select id="CountySelect" class="form-select mb-3" aria-label="Default select example">
-               
+            <select name="county" id="countySelect" class="form-select mb-3" aria-label="Default select example">
+                <option disabled selected>Select a County</option>
             </select>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -40,7 +40,10 @@
     </div>
 </div>
 <?php
-if (isset($_SESSION["register_submit"])) {
-    registerUser($name, $surname, $email, $password, $password_check, $district, $county);
+
+if (isset($_POST["register_submit"], $_POST['district'], $_POST['county'])) {
+
+    echo '<script>console.log("Cheguei aqui");</script>';
+    registerUser($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['password'], $_POST['password_check'], $_POST['district'], $_POST['county']);
 }
 ?>

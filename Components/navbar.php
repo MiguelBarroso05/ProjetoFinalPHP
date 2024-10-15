@@ -19,11 +19,11 @@
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      <div class="ms-auto " style="margin-right: 2%; font-size: 20px;">
+      <div class="ms-auto " style="margin-right: 2%; font-size: 20px; display: inline-flex">
         <?php 
             if(isset($_SESSION["email"])) {
-                echo' <a class="nav-link" href="#"><i class="fa-regular fa-user"></i></a>
-                <a class="nav-link" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>';
+                echo' <a class="nav-link" href="#" style="margin-right: 25%;"><i class="fa-regular fa-user"></i></a>
+                <a class="nav-link" href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>';
 
             }
             else {

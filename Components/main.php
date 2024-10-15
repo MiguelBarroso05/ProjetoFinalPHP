@@ -1,5 +1,7 @@
 <main>
 	<?php 
+	include 'Functions\index.php';
+
 	@$nav = $_REQUEST['nav'];
 	switch ($nav) {
 		case 'login':

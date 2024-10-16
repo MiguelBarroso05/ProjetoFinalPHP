@@ -5,7 +5,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "Functions/getCountys.php",
+            url: "Functions/F_getCountys.php",
             dataType: "text",
             data: {
                 "district_id": district_id

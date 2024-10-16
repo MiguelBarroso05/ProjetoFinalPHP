@@ -17,7 +17,6 @@
   <tbody>
 
     <?php
-    include 'Functions\getClients.php';
     getClients();
     ?>
 

@@ -11,7 +11,12 @@
 			break;
 		case 'adminUsers':
 			include 'Components\Admin\ManageUsers.php';
-		default:		
+			break;
+		case 'updateUser':
+			include 'Components/Admin/updateUser.php';
+			break;	
+		default:	
+			echo'<marquee style="margin-top: 5%;"><img src="./images/image.png" alt=""><marquee>';	
 			break;
 	}
 	?>

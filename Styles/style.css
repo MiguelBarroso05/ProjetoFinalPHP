@@ -1,0 +1,8 @@
+.editIcon{
+    text-decoration: none;
+    color: black;
+}
+
+.editIcon:hover{
+    color: #d4871d;
+}

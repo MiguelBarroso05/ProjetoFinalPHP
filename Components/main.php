@@ -9,7 +9,8 @@
 		case 'register':
 			include 'Components/register.php';
 			break;
-		
+		case 'adminUsers':
+			include 'Components\Admin\ManageUsers.php';
 		default:		
 			break;
 	}

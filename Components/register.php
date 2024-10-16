@@ -31,6 +31,15 @@
             <select name="county" id="countySelect" class="form-select mb-3" aria-label="Default select example">
                 <option disabled selected>Select a County</option>
             </select>
+            <?php
+                if (isset($_SESSION["role"]) && $_SESSION["role"] == 1) {
+                    echo '<select name="role" class="form-select mb-3" aria-label="Default select example">
+                    <option disabled selected>Select a Role</option>
+                    <option value="1">Admin</option>
+                    <option value="2">User</option>
+                </select>';
+                }
+            ?>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">I agree with the terms of service of Herdades do Sol</label>
@@ -40,10 +49,15 @@
     </div>
 </div>
 <?php
+if (isset($_SESSION["role"]) && $_SESSION["role"] == 1) {
+    if (isset($_POST["register_submit"], $_POST['district'], $_POST['county'] )) {
 
-if (isset($_POST["register_submit"], $_POST['district'], $_POST['county'])) {
+        registerUser($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['password'], $_POST['password_check'], $_POST['role'], $_POST['district'], $_POST['county']);
+    }
+}
+//Client registration by himself
+if (isset($_POST["register_submit"], $_POST['district'], $_POST['county'] )) {
 
-    echo '<script>console.log("Cheguei aqui");</script>';
-    registerUser($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['password'], $_POST['password_check'], $_POST['district'], $_POST['county']);
+    registerUser($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['password'], $_POST['password_check'], 2, $_POST['district'], $_POST['county']);
 }
 ?>

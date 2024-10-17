@@ -12,14 +12,15 @@ function registerUser($name, $surname, $email, $password, $password_check, $role
 		$password_check = mysqli_real_escape_string($conn, $password_check);
 		$role = mysqli_real_escape_string($conn, $role);
 		if ($password == $password_check) {
-			$checkUserAreadyCreated = mysqli_fetch_array(mysqli_query($conn, "SELECT email FROM user WHERE email = '$email'"));
-			if (!$checkUserAreadyCreated) {
-				$password = base64_encode($password);
-				$id = mysqli_insert_id($conn); //chave primaria gerada na ultima interação
-				mysqli_query($conn, "INSERT INTO user (id, name, surname, email, password, role, district, county) VALUES ('$id', '$name', '$surname', '$email', '$password', '$role', '$district', '$county')");
-				//TODO ADICIONAR REDIRECIONAMENTO PARA LOGIN
-			} else {
+			$checkEmailAreadyCreated = mysqli_num_rows(mysqli_query($conn, "SELECT email FROM user WHERE email = '$email'"));
+			if ($checkEmailAreadyCreated > 0) {
 				echo 'Email already registered';
+			} else {
+				$password = base64_encode($password);
+				mysqli_query($conn, "INSERT INTO user (name, surname, email, password, role, district, county) VALUES ( '$name', '$surname', '$email', '$password', '$role', '$district', '$county')");
+				if (isset($_SESSION["role"]) && $_SESSION["role"] == 1) {
+					echo '<meta http-equiv="refresh" content="0;url=index.php?nav=adminUsers">';
+				}
 			}
 		} else {
 			echo 'The passwords do not match';

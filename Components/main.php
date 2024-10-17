@@ -13,7 +13,7 @@
 			include 'Components\Admin\ManageUsers.php';
 			break;
 		case 'updateUser':
-			include 'Components/Admin/updateUser.php';
+			include 'Components/updateUser.php';
 			break;	
 		default:	
 			echo'<marquee style="margin-top: 5%;"><img src="./images/image.png" alt=""><marquee>';	

@@ -19,10 +19,10 @@ function updateUser($name, $surname, $email, $password, $password_check, $role, 
                     $password = base64_encode($password);
                     mysqli_query($conn, "UPDATE user SET  name = '$name', surname = '$surname', email = '$email', password = '$password', role = '$role', district = '$district', county = '$county' WHERE user.id = '$id'");
                     if(isset($_SESSION["role"]) && $_SESSION["role"] == 1){
-                        //TODO ADICIONAR REDIRECIONAMENTO PARA MANAGE USERS (ADMIN)
+                        echo '<meta http-equiv="refresh" content="0;url=index.php?nav=adminUsers">';
                     }
                     else{
-                        //TODO ADICIONAR REDIRECIONAMENTO PARA HOME (USER)
+                        echo '<meta http-equiv="refresh" content="0;url=index.php">';
                     }
                 } else {
                     echo 'The passwords do not match';
@@ -30,10 +30,10 @@ function updateUser($name, $surname, $email, $password, $password_check, $role, 
             } else {
                 mysqli_query($conn, "UPDATE user SET  name = '$name', surname = '$surname', email = '$email', role = '$role', district = '$district', county = '$county' WHERE user.id = '$id'");
                 if(isset($_SESSION["role"]) && $_SESSION["role"] == 1){
-                    //TODO ADICIONAR REDIRECIONAMENTO PARA MANAGE USERS (ADMIN)
+                    echo '<meta http-equiv="refresh" content="0;url=index.php?nav=adminUsers">';
                 }
                 else{
-                    //TODO ADICIONAR REDIRECIONAMENTO PARA HOME (USER)
+                    echo '<meta http-equiv="refresh" content="0;url=index.php">';
                 }
             }
         } else {

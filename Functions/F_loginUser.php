@@ -11,7 +11,7 @@ function loginUser($email, $password)
     if ($email == "" || $password == "") {
         echo "Please fill in all the fields";
     } else {
-        $q = mysqli_query($conn, "SELECT email, password, role FROM user WHERE email = '$email' AND password = '$password' AND ative = 1");
+        $q = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email' AND password = '$password' AND ative = 1");
         $check = mysqli_num_rows($q); 
 
         if ($check == 0) {

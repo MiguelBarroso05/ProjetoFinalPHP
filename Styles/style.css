@@ -8,6 +8,7 @@
 }
 
 .createUserButton{
+    width: 15% !important;
     color: white;
     background-color: black;
     border-color: black;

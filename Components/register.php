@@ -55,8 +55,7 @@ if (isset($_SESSION["role"]) && $_SESSION["role"] == 1) {
     }
 }
 //Client registration by himself
-if (isset($_POST["register_submit"], $_POST['district'], $_POST['county'] )) {
-
+else if (isset($_POST["register_submit"], $_POST['district'], $_POST['county'] )) {
     registerUser($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['password'], $_POST['password_check'], 2, $_POST['district'], $_POST['county']);
 }
 ?>

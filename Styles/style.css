@@ -6,3 +6,21 @@
 .editIcon:hover{
     color: #d4871d;
 }
+
+.createUserButton{
+    color: white;
+    background-color: black;
+    border-color: black;
+}
+
+.createUserButton:hover{
+    color: white;
+    background-color: #d4871d;
+    border-color: #d4871d;
+}
+
+.createUserButton:active{
+    color: white !important;
+    background-color: black !important;
+    border-color: black !important;
+}

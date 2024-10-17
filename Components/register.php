@@ -51,7 +51,6 @@
 <?php
 if (isset($_SESSION["role"]) && $_SESSION["role"] == 1) {
     if (isset($_POST["register_submit"], $_POST['district'], $_POST['county'] )) {
-
         registerUser($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['password'], $_POST['password_check'], $_POST['role'], $_POST['district'], $_POST['county']);
     }
 }

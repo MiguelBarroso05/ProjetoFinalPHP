@@ -5,6 +5,7 @@ function updateUser($name, $surname, $email, $password, $password_check, $role, 
         echo "Please fill in all the fields";
     } else {
         include 'Connections/config.php';
+
         $name = mysqli_real_escape_string($conn, $name);
         $surname = mysqli_real_escape_string($conn, $surname);
         $email = mysqli_real_escape_string($conn, $email);
@@ -17,13 +18,23 @@ function updateUser($name, $surname, $email, $password, $password_check, $role, 
                 if ($password == $password_check) {
                     $password = base64_encode($password);
                     mysqli_query($conn, "UPDATE user SET  name = '$name', surname = '$surname', email = '$email', password = '$password', role = '$role', district = '$district', county = '$county' WHERE user.id = '$id'");
-                    echo '<meta http-equiv="refresh" content="0;url=index.php?nav=adminUsers">';
+                    if(isset($_SESSION["role"]) && $_SESSION["role"] == 1){
+                        //TODO ADICIONAR REDIRECIONAMENTO PARA MANAGE USERS (ADMIN)
+                    }
+                    else{
+                        //TODO ADICIONAR REDIRECIONAMENTO PARA HOME (USER)
+                    }
                 } else {
                     echo 'The passwords do not match';
                 }
             } else {
                 mysqli_query($conn, "UPDATE user SET  name = '$name', surname = '$surname', email = '$email', role = '$role', district = '$district', county = '$county' WHERE user.id = '$id'");
-                echo '<meta http-equiv="refresh" content="0;url=index.php?nav=adminUsers">';
+                if(isset($_SESSION["role"]) && $_SESSION["role"] == 1){
+                    //TODO ADICIONAR REDIRECIONAMENTO PARA MANAGE USERS (ADMIN)
+                }
+                else{
+                    //TODO ADICIONAR REDIRECIONAMENTO PARA HOME (USER)
+                }
             }
         } else {
             echo 'Email already registered';

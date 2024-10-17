@@ -15,7 +15,6 @@
 </div>
 <?php
 if (isset($_POST["login_submit"])) {
-
   loginUser($_POST['email'], $_POST['password']);
 }
 ?>

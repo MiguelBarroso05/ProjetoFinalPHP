@@ -17,7 +17,7 @@ function registerUser($name, $surname, $email, $password, $password_check, $role
 				$password = base64_encode($password);
 				$id = mysqli_insert_id($conn); //chave primaria gerada na ultima interação
 				mysqli_query($conn, "INSERT INTO user (id, name, surname, email, password, role, district, county) VALUES ('$id', '$name', '$surname', '$email', '$password', '$role', '$district', '$county')");
-				echo 'Account created with success!';
+				//TODO ADICIONAR REDIRECIONAMENTO PARA LOGIN
 			} else {
 				echo 'Email already registered';
 			}

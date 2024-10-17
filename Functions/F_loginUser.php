@@ -20,7 +20,6 @@ function loginUser($email, $password)
             
             $a = mysqli_fetch_array($q);
 
-            
             $_SESSION["email"] =  $a["email"];
             $_SESSION["role"] = $a["role"];
             echo '<meta http-equiv="refresh" content="0;url=index.php">';

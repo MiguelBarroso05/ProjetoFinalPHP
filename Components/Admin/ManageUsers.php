@@ -1,4 +1,7 @@
-<div style="display: flex; justify-content: center; margin-top: 2%; ">
+<div style="display: flex; justify-content: center; margin-top: 0.5%; ">
+  <a name="createNewUser_submit" type="submit" class="btn btn-primary createUserButton" href="index.php?nav=register" >Create new User</a>
+</div>
+<div style="display: flex; justify-content: center; margin-top: 0.5%; ">
   <div style="padding: 5px; width: 61%; background-color: black; border-radius: 3px;">
   <table class="table" style="margin-bottom: 0;">
   <thead>
@@ -17,7 +20,7 @@
   <tbody>
 
     <?php
-    getClients();
+      getClients();
     ?>
 
   </tbody>

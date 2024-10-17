@@ -8,8 +8,6 @@
         JOIN district d ON d.id = u.district
         JOIN county c ON c.id = u.county");
         
-     
-
         while ($a = mysqli_fetch_array($q)) {
             
         $role = getRoleName($a['role']);

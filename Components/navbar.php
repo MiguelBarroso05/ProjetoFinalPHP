@@ -6,13 +6,7 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <?php
-      @$email = $_SESSION["email"];
-      @$id = $_SESSION["id"];
-      include 'connections/config.php';
-      $q = mysqli_query($conn, "SELECT * from user WHERE email = '$email' OR id = '$id'");
-      $a = mysqli_fetch_array($q);
-      @$_SESSION["id"] =  $a["id"];
-      @$_SESSION["role"] =  $a["role"];
+      
       //ADMIN NAV BAR
       if (isset($_SESSION["role"]) && $_SESSION["role"] == 1) {
         echo ' <ul class="navbar-nav" style="font-size: 20px;">
@@ -49,7 +43,8 @@
       <div class="ms-auto " style="margin-right: 2%; font-size: 20px; display: inline-flex">
         <?php
         if (isset($_SESSION["email"])) {
-          echo ' <a class="nav-link" href="?nav=updateUser&id='.$a['id'].'" style="margin-right: 25%;"><i class="fa-regular fa-user"></i></a>
+          $id = $_SESSION["id"];
+          echo ' <a class="nav-link" href="?nav=updateUser&id='.$id.'" style="margin-right: 25%;"><i class="fa-regular fa-user"></i></a>
                 <a class="nav-link" href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>';
         } else {
           echo '<a class="nav-link" href="?nav=login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>';

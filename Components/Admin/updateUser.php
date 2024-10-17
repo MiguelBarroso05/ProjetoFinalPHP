@@ -61,7 +61,6 @@ $role = getRoleName($a['role']);
                 if ($a['role'] != '1') {
                     echo '<option value="1">Admin</option>';
                 }
-
                 if ($a['role'] != '2') {
                     echo '<option value="2">User</option>';
                 }
@@ -75,7 +74,14 @@ $role = getRoleName($a['role']);
 <?php
 
 if (isset($_POST["update_submit"])) {
-    updateUser($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['password'], $_POST['password_check'], $_POST['role'], $_POST['district'], $_POST['county'], $a['id']);
+    if(isset($_SESSION["role"]) && $_SESSION["role"] == 1){
+        updateUser($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['password'], $_POST['password_check'], $_POST['role'], $_POST['district'], $_POST['county'], $a['id']);
+    }
+    else{
+        updateUser($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['password'], $_POST['password_check'], 2, $_POST['district'], $_POST['county'], $a['id']);
+    }
+    
 }
+
 
 ?>

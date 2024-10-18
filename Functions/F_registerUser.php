@@ -12,8 +12,8 @@ function registerUser($name, $surname, $email, $password, $password_check, $role
 		$password_check = mysqli_real_escape_string($conn, $password_check);
 		$role = mysqli_real_escape_string($conn, $role);
 		if ($password == $password_check) {
-			$checkEmailAreadyCreated = mysqli_num_rows(mysqli_query($conn, "SELECT email FROM user WHERE email = '$email'"));
-			if ($checkEmailAreadyCreated > 0) {
+			$checkEmailAlreadyCreated = mysqli_num_rows(mysqli_query($conn, "SELECT email FROM user WHERE email = '$email'"));
+			if ($checkEmailAlreadyCreated > 0) {
 				echo 'Email already registered';
 			} else {
 				$password = base64_encode($password);

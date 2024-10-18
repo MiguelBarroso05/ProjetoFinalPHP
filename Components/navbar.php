@@ -17,7 +17,7 @@
           <a class="nav-link" href="?nav=adminUsers">Users</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Categories</a>
+          <a class="nav-link" href="?nav=adminCategories">Categories</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" heref="#">Disabled</a>

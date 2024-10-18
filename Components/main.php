@@ -15,6 +15,9 @@
 		case 'updateUser':
 			include 'Components/updateUser.php';
 			break;	
+		case 'adminCategories':
+			include 'Components\Admin\ManageCategories.php';
+			break;	
 		default:	
 			echo'<marquee style="margin-top: 5%;"><img src="./images/image.png" alt=""><marquee>';	
 			break;

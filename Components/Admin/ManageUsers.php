@@ -1,18 +1,22 @@
-
-<div style="display: flex;flex-direction: column; justify-items: center !important; margin-top: 0.5%; ">
-  <a name="createNewUser_submit" type="submit" class="btn btn-primary createUserButton" href="index.php?nav=register">Create new User</a>
-  <div style="display: inline-flex;">
-    <select name="districtSearch" id="districtSearch" class="form-select mb-3" aria-label="Default select example" style="width: 15%; margin-right: 1%; margin-bottom: 0 !important;">
+<div style="display: flex; justify-content: space-between; width: 61%; margin: 0 auto;">
+  <!-- Dropdowns de pesquisa no lado esquerdo -->
+  <div style="display: flex;">
+    <select name="districtSearch" id="districtSearch" class="form-select mb-3" aria-label="Default select example" style="width: 52%; margin-bottom: 0 !important;">
       <option selected value="-1">All Districts</option>
-      <?php
-      getDistricts();
-      ?>
+      <?php getDistricts(); ?>
     </select>
-    <select name="countySearch" id="countySelect" class="form-select mb-3" aria-label="Default select example" style="width: 15%; margin-right: 1%; margin-bottom: 0 !important;">
+    <select name="countySearch" id="countySelect" class="form-select mb-3" aria-label="Default select example" style="width: 57%; margin-left:5%; margin-bottom: 0 !important;">
       <option disabled selected>Select a County</option>
     </select>
   </div>
+
+  <!-- Botão de criar novo usuário no lado direito -->
+  <div>
+    <a name="createNewUser_submit" type="submit" class="btn btn-primary createUserButton" href="index.php?nav=register">Create new User</a>
+  </div>
 </div>
+
+<!-- Tabela centrada abaixo dos dropdowns e do botão -->
 <div style="display: flex; justify-content: center; margin-top: 0.5%; ">
   <div style="padding: 5px; width: 61%; background-color: black; border-radius: 3px;">
     <table class="table" style="margin-bottom: 0;">
@@ -30,9 +34,10 @@
         </tr>
       </thead>
       <tbody id="tableBody">
-    
+        <!-- Conteúdo da tabela -->
       </tbody>
     </table>
   </div>
 </div>
+
 

@@ -9,4 +9,5 @@ include 'Functions/F_updateUser.php';
 include 'Functions/F_getRoleName.php';
 include 'Functions/F_getCategories.php';   
 include 'Functions/F_createCategory.php';  
+include 'Functions/F_updateCategory.php';  
 ?>

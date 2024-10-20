@@ -18,7 +18,11 @@
         </div>
     </div>
     <div style="display: flex; justify-content: center; margin-top: 0.5%; width: 50%;">
-        <div class="container  mt-5 ">
+        <?php if (isset($_GET['id'])) {
+            include 'updateCategory.php';
+        }
+        else{
+            echo '<div class="container  mt-5 ">
             <div class="d-flex " style="flex-direction: column; align-items: center">
                 <div>
                     <h4>CREATE NEW CATEGORY</h4>
@@ -29,14 +33,16 @@
                         <input name="category_name" type="text" class="form-control" id="" aria-describedby="emailHelp">
                     </div>
 
-                    <button name="createCategory_submit" type="submit" class="btn btn-primary">Register</button>
-                    <?php if (isset($_POST["createCategory_submit"])) {
-                        createCategory($_POST['category_name']);
-                    }?>
-
-
+                    <button name="createCategory_submit" type="submit" class="btn btn-primary">Create Category</button>
                 </form>
             </div>
-        </div>
+        </div>';
+        if (isset($_POST["createCategory_submit"])) {
+            createCategory($_POST['category_name']); // Corrigido o acesso ao campo
+        }
+        }
+        ?>
+
+        
     </div>
 </div>

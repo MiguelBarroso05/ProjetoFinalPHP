@@ -10,7 +10,7 @@ function getCategories()
         echo ' <th scope="row">' . $a['id'] . '</th>
             <td>' . $a['name'] . '</td>
             <td>' . $count . '</td>
-            <td><a class="editIcon" href="?nav=updateCategory&id=' . $a['id'] . '" ><i class="fa-solid fa-pen-to-square"></i></a></td>
+            <td><a class="editIcon" href="?nav=adminCategories&id=' . $a['id'] . '" ><i class="fa-solid fa-pen-to-square"></i></a></td>
             <td><a class="editIcon" href="deleteCategory.php?id=' . $a['id'] . '" ><i class="fa-solid fa-trash"></i></a></td>     
             </tr>';
     }

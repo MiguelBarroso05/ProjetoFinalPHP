@@ -19,7 +19,7 @@ $a = mysqli_fetch_array($q);
 
             <button name="updateCategory_submit" type="submit" class="btn btn-primary">Update</button>
             <?php if (isset($_POST["updateCategory_submit"])) {
-                updateCategory($_POST['id'], $_POST['name']);
+                updateCategory($id, $_POST['name']);
             } ?>
 
         </form>

@@ -1,9 +1,9 @@
 <div class="container  mt-5 ">
     <div class="d-flex justify-content-center">
-        <form style="width: 100%; max-width: 400px;" method="post">
+        <form style="width: 100%; max-width: 400px;" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Name</label>
-                <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input name="product_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Price</label>
@@ -26,21 +26,20 @@
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="form-label">Image</label>
-                </div>
-                <div class="custom-file">
-                    <input name="image" type="file" class="custom-file-input" id="inputGroupFile01">
-                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    <div class="custom-file">
+                        <label class="form-label" for="inputGroupFile01">Choose file</label>
+                        <input name="image" type="file" class="custom-file-input" id="inputGroupFile01" accept="image/png, image/jpeg, application/pdf">
+                    </div>
                 </div>
             </div>
-            <button name="createProduct_submit" type="submit" class="btn btn-primary">Create new product</button>
+            <button name="createProduct_submit" type="submit" class="btn btn-primary InteractiveButton">Create new product</button>
         </form>
     </div>
 </div>
 <?php
 //Client registration by himself
-if (isset($_POST["createProduct_submit"], $_POST['category'],)) {
-    echo ''.$_POST['name'].', '.$_POST['category'].', '.$_POST['price'].', '.$_POST['description'].', '.$_POST['image'].', '.$_POST['amount'].'';
-    createProduct($_POST['name'], $_POST['category'], $_POST['price'], $_POST['description'], $_POST['image'], $_POST['amount']);
+if (isset($_POST["createProduct_submit"], $_POST['category'])) {
+    createProduct($_POST['product_name'], $_POST['category'], $_POST['price'], $_POST['description'],  $_FILES['image'], $_POST['amount']);
 }
 
 ?>

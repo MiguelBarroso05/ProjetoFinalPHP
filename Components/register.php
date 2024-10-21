@@ -22,7 +22,7 @@
                 <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
                 <input name="password_check" type="password" class="form-control" id="exampleInputPassword1">
             </div>
-            <select name="district" id="districtSelect" class="form-select mb-3" aria-label="Default select example">
+            <select name="district" id="districtSearch" class="form-select mb-3" aria-label="Default select example">
                 <option disabled selected>Select a District</option>
                 <?php
                 getDistricts()
@@ -44,7 +44,7 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">I agree with the terms of service of Herdades do Sol</label>
             </div>
-            <button name="register_submit" type="submit" class="btn btn-primary">Register</button>
+            <button name="register_submit" type="submit" class="btn btn-primary InteractiveButton">Register</button>
         </form>
     </div>
 </div>

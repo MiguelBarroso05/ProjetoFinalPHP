@@ -17,7 +17,7 @@ $a = mysqli_fetch_array($q);
                 <input name="name" value="<?php echo $a['name'] ?>" type="text" class="form-control" id="id_CategoryName" aria-describedby="emailHelp">
             </div>
 
-            <button name="updateCategory_submit" type="submit" class="btn btn-primary">Update</button>
+            <button name="updateCategory_submit" type="submit" class="btn btn-primary InteractiveButton">Update</button>
             <?php if (isset($_POST["updateCategory_submit"])) {
                 updateCategory($id, $_POST['name']);
             } ?>

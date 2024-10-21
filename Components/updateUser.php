@@ -67,7 +67,7 @@ $role = getRoleName($a['role']);
                 echo '</select>';
             }
             ?>
-            <button name="update_submit" type="submit" class="btn btn-primary">Update User</button>
+            <button name="update_submit" type="submit" class="btn btn-primary InteractiveButton">Update User</button>
         </form>
     </div>
 </div>

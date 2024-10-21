@@ -7,19 +7,19 @@
     color: #d4871d;
 }
 
-.createUserButton{
+.InteractiveButton{
     color: white;
     background-color: black;
     border-color: black;
 }
 
-.createUserButton:hover{
+.InteractiveButton:hover{
     color: white;
     background-color: #d4871d;
     border-color: #d4871d;
 }
 
-.createUserButton:active{
+.InteractiveButton:active{
     color: white !important;
     background-color: black !important;
     border-color: black !important;

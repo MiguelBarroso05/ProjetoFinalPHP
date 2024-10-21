@@ -11,7 +11,7 @@
       if (isset($_SESSION["role"]) && $_SESSION["role"] == 1) {
         echo ' <ul class="navbar-nav" style="font-size: 20px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="?nav=dashboard">Dashboard</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="?nav=adminUsers">Users</a>

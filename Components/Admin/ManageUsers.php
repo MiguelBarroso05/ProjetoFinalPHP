@@ -1,4 +1,4 @@
-<div style="display: flex; justify-content: space-between; width: 61%; margin: 0 auto;">
+<div style="display: flex; justify-content: space-between; width: 60%; margin: 0 auto;">
   <!-- Dropdowns de pesquisa no lado esquerdo -->
   <div style="display: flex;">
     <select name="districtSearch" id="districtSearch" class="form-select mb-3" aria-label="Default select example" style="width: 52%; margin-bottom: 0 !important;">
@@ -12,13 +12,13 @@
 
   <!-- Botão de criar novo usuário no lado direito -->
   <div>
-    <a name="createNewUser_submit" type="submit" class="btn btn-primary createUserButton" href="index.php?nav=register">Create new User</a>
+    <a name="createNewUser_submit" type="submit" class="btn btn-primary InteractiveButton" href="index.php?nav=register">Create new User</a>
   </div>
 </div>
 
 <!-- Tabela centrada abaixo dos dropdowns e do botão -->
 <div style="display: flex; justify-content: center; margin-top: 0.5%; ">
-  <div style="padding: 5px; width: 61%; background-color: black; border-radius: 3px;">
+  <div style="padding: 5px; width: 60%; background-color: black; border-radius: 3px;">
     <table class="table" style="margin-bottom: 0;">
       <thead>
         <tr>
@@ -33,7 +33,7 @@
           <th scope="col"></th>
         </tr>
       </thead>
-      <tbody id="tableBody">
+      <tbody id="tableUsers">
         <!-- Conteúdo da tabela -->
       </tbody>
     </table>

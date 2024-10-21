@@ -1,5 +1,5 @@
 <main>
-	<?php 
+	<?php
 
 	@$nav = $_REQUEST['nav'];
 	switch ($nav) {
@@ -14,15 +14,21 @@
 			break;
 		case 'updateUser':
 			include 'Components/updateUser.php';
-			break;	
+			break;
 		case 'adminCategories':
 			include 'Components\Admin\ManageCategories.php';
-			break;	
-		case 'adminProducts':
-			include 'Components\Admin\CreateProduct.php';
 			break;
-		default:	
-			echo'<marquee style="margin-top: 5%;"><img src="./images/image.png" alt=""><marquee>';	
+		case 'adminProducts':
+			include 'Components\Admin\manageProducts.php';
+			break;
+		case 'updateProduct':
+			include 'Components/Admin/updateProduct.php';
+			break;
+		case 'dashboard':
+			include 'Components/Admin/dashboard.php';
+			break;
+		default:
+			echo '<marquee style="margin-top: 5%;"><img src="./images/image.png" alt=""><marquee>';
 			break;
 	}
 	?>

@@ -32,7 +32,7 @@
                         <input name="category_name" type="text" class="form-control" id="" aria-describedby="emailHelp">
                     </div>
 
-                    <button name="createCategory_submit" type="submit" class="btn btn-primary">Create Category</button>
+                    <button name="createCategory_submit" type="submit" class="btn btn-primary InteractiveButton">Create Category</button>
                 </form>
             </div>
         </div>';

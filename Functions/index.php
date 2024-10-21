@@ -10,4 +10,6 @@ include 'Functions/F_getRoleName.php';
 include 'Functions/F_getCategories.php';   
 include 'Functions/F_createCategory.php';  
 include 'Functions/F_updateCategory.php';  
+include 'Functions/F_createProduct.php';
+include 'Functions/F_getCategoriesDropdown.php'; 
 ?>

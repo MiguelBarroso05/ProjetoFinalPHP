@@ -20,8 +20,7 @@
     <div style="display: flex; justify-content: center; margin-top: 0.5%; width: 50%;">
         <?php if (isset($_GET['id'])) {
             include 'updateCategory.php';
-        }
-        else{
+        } else {
             echo '<div class="container  mt-5 ">
             <div class="d-flex " style="flex-direction: column; align-items: center">
                 <div>
@@ -37,12 +36,10 @@
                 </form>
             </div>
         </div>';
-        if (isset($_POST["createCategory_submit"])) {
-            createCategory($_POST['category_name']); // Corrigido o acesso ao campo
-        }
+            if (isset($_POST["createCategory_submit"])) {
+                createCategory($_POST['category_name']); // Corrigido o acesso ao campo
+            }
         }
         ?>
-
-        
     </div>
 </div>

@@ -18,6 +18,9 @@
 		case 'adminCategories':
 			include 'Components\Admin\ManageCategories.php';
 			break;	
+		case 'adminProducts':
+			include 'Components\Admin\CreateProduct.php';
+			break;
 		default:	
 			echo'<marquee style="margin-top: 5%;"><img src="./images/image.png" alt=""><marquee>';	
 			break;

@@ -8,7 +8,24 @@ $(document).ready(function () {
         $("#tableUsers").html(response);
       },
     });
+
+    $.ajax({
+      type: "POST",
+      url: "Functions/Dashboard/F_getLastLogin.php",
+      dataType: "text",
+      success: function (response) {
+        $("#tableUsersLastLogins").html(response);
+      },
+    });
   
+    $.ajax({
+      type: "POST",
+      url: "Functions/Dashboard/F_getbestSellingProducts.php",
+      dataType: "text",
+      success: function (response) {
+        $("#tableBestSellingProducts").html(response);
+      },
+    });
 
     $.ajax({
       type: "POST",
@@ -17,6 +34,24 @@ $(document).ready(function () {
       success: function (response) {
         $("#tableProducts").html(response);
       },
+    });
+
+    $("#categorySearch").click(function () {
+      $("#categorySearch").change(function () {
+        let category_id_list = $("#categorySearch option:selected").attr("value");
+
+        $.ajax({
+          type: "POST",
+          url: "Functions/F_getProducts.php",
+          dataType: "text",
+          data: {
+            "category_id_list": category_id_list,
+          },
+          success: function (response) {
+            $("#tableProducts").html(response);
+          },
+        });
+      });
     });
 
 
@@ -29,7 +64,7 @@ $(document).ready(function () {
 
   $("#countySelect").click(function () {
     $("#countySelect").change(function () {
-      var county_id_list = $("#countySelect option:selected").attr("value");
+      let county_id_list = $("#countySelect option:selected").attr("value");
       if (county_id_list != -1) {
           $.ajax({
             type: "POST",
@@ -54,7 +89,7 @@ $(document).ready(function () {
 
   function distrctAjax() {
 
-    var district_id_list = $("#districtSearch option:selected").attr("value");
+    let district_id_list = $("#districtSearch option:selected").attr("value");
 
     $.ajax({
       type: "POST",

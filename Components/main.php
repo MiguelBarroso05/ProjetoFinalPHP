@@ -24,8 +24,14 @@
 		case 'updateProduct':
 			include 'Components/Admin/updateProduct.php';
 			break;
+		case 'createProduct':
+			include 'Components/Admin/createProduct.php';
+			break;
 		case 'dashboard':
 			include 'Components/Admin/dashboard.php';
+			break;
+		case 'productDisplay':
+			include 'Components/productDisplay.php';
 			break;
 		default:
 			echo '<marquee style="margin-top: 5%;"><img src="./images/image.png" alt=""><marquee>';

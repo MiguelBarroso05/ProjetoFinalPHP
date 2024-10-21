@@ -10,7 +10,7 @@
 
   <!-- Botão de criar novo usuário no lado direito -->
   <div>
-    <a name="createNewProduct_submit" type="submit" class="btn btn-primary InteractiveButton" href="index.php?nav=register">Create new Product</a>
+    <a name="createNewProduct_submit" type="submit" class="btn btn-primary InteractiveButton" href="index.php?nav=createProduct">Create new Product</a>
   </div>
 </div>
 

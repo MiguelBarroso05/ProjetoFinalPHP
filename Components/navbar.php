@@ -26,7 +26,7 @@
       } else {
         echo ' <ul class="navbar-nav" style="font-size: 20px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="?nav=productDisplay">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Features</a>

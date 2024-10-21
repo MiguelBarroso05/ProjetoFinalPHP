@@ -17,8 +17,8 @@ function loginUser($email, $password)
         if ($check == 0) {
             echo 'Error';
         } else {
-            
             $a = mysqli_fetch_array($q);
+            mysqli_query($conn, "Update user SET last_login = NOW() WHERE id = '$a[id]'");
 
             $_SESSION["id"] = $a["id"];
             $_SESSION["email"] =  $a["email"];

@@ -5,7 +5,6 @@
       <option selected value="-1">All Categories</option>
       <?php getCategoriesDropdown(); ?>
     </select>
-
   </div>
 
   <!-- Botão de criar novo usuário no lado direito -->

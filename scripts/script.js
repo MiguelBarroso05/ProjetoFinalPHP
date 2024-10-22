@@ -36,6 +36,15 @@ $(document).ready(function () {
       },
     });
 
+    $.ajax({
+      type: "POST",
+      url: "Functions/F_getProductsToDisplay.php",
+      dataType: "text",
+      success: function (response) {
+        $("#displayProducts").html(response);
+      },
+    });
+
     $("#categorySearch").click(function () {
       $("#categorySearch").change(function () {
         let category_id_list = $("#categorySearch option:selected").attr("value");
@@ -49,6 +58,24 @@ $(document).ready(function () {
           },
           success: function (response) {
             $("#tableProducts").html(response);
+          },
+        });
+      });
+    });
+
+    $("#categorySearch").click(function () {
+      $("#categorySearch").change(function () {
+        let category_id_list = $("#categorySearch option:selected").attr("value");
+
+        $.ajax({
+          type: "POST",
+          url: "Functions/F_getProductsToDisplay.php",
+          dataType: "text",
+          data: {
+            "category_id_list": category_id_list,
+          },
+          success: function (response) {
+            $("#displayProducts").html(response);
           },
         });
       });
@@ -117,3 +144,5 @@ $(document).ready(function () {
 
   }
 });
+
+

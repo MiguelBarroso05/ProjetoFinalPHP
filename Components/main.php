@@ -33,6 +33,9 @@
 		case 'productDisplay':
 			include 'Components/productDisplay.php';
 			break;
+		case 'basket':
+			include 'Components/basket.php';
+			break;
 		default:
 			echo '<marquee style="margin-top: 5%;"><img src="./images/image.png" alt=""><marquee>';
 			break;

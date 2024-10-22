@@ -1,4 +1,4 @@
-<main>
+<main style="background-color: #f6f8fb;" >
 	<?php
 
 	@$nav = $_REQUEST['nav'];
@@ -37,7 +37,14 @@
 			include 'Components/basket.php';
 			break;
 		default:
-			echo '<marquee style="margin-top: 5%;"><img src="./images/image.png" alt=""><marquee>';
+		if (isset($_SESSION["role"]) && $_SESSION["role"] == 1) {
+			include 'Components/Admin/dashboard.php';
+
+		} elseif (isset($_SESSION["role"]) && $_SESSION["role"] == 2) {
+			include 'Components/productDisplay.php';
+		}
+		else
+			include 'Components/login.php';
 			break;
 	}
 	?>

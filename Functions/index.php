@@ -15,4 +15,6 @@ include 'Functions/F_getCategoriesDropdown.php';
 include 'Functions/F_updateProduct.php';
 include 'Functions/F_getBasket.php';
 include 'Functions/F_addProductToBasket.php';
+include 'Functions/Dashboard/F_getCategorySales.php';
+include 'Functions/Dashboard/F_getLastMonthSales.php';
 ?>

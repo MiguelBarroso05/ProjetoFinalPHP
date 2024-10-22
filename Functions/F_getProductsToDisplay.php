@@ -22,7 +22,7 @@ while ($a = mysqli_fetch_array($q)) {
     echo '
             <div class="col-2">
                 <div class="card mb-4">
-                    <div class="card-body" style="border: solid; border-radius: 3px;">
+                    <div class="card-body" style="border: solid; border-radius: 3px;     min-height: 326px !important;">
                         <h5 class="card-title">' . $a['name'] . '</h5>
                         <p class="card-subtitle mb-2 text-muted">' . $a['description'] . '</p>
                         <p class="card-text">' . $a['price'] . '€</p>

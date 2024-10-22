@@ -25,17 +25,5 @@
     <h6><?php echo "Total price: $total_price €" ?></h6>
 </div>
 <div style="display: flex; justify-content: center; width: 60%; margin: 0 auto;">
-  <!-- Dropdowns de pesquisa no lado esquerdo -->
-  <div style="margin: 1%;">
-    <a name="buyBasket_submit" type="submit" class="btn btn-primary InteractiveButton" href="index.php?nav=register">Buy Basket</a>
-  </div>
-
-  <!-- Botão de criar novo usuário no lado direito -->
-  <div style="margin: 1%;">
-    <a name="deleteBasket_submit" type="submit" class="btn btn-primary InteractiveButton" href="index.php?nav=register">Delete Basket</a>
-  </div>
-</div>
-
-<div>
-
+    <?php buyAndDeleteBasket() ?>
 </div>

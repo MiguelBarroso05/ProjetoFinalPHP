@@ -24,3 +24,7 @@
     background-color: black !important;
     border-color: black !important;
 }
+
+html, body {
+    min-height: 100vh;
+}

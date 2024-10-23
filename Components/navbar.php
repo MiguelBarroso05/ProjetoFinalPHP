@@ -23,6 +23,9 @@
         <li class="nav-item">
           <a class="nav-link" href="?nav=adminProducts">Products</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="?nav=adminSales">Sales</a>
+        </li>
       </ul>';
       } elseif (isset($_SESSION["role"]) && $_SESSION["role"] == 2) {
         echo ' <ul class="navbar-nav" style="font-size: 20px;">

@@ -1,3 +1,6 @@
+<div style="width: 100%; padding: 1%;">
+    <h3>Category Sales</h3>
+</div>
 <div>
     <canvas id="myChart"></canvas>
 </div>

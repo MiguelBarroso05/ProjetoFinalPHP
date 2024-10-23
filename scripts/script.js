@@ -17,6 +17,15 @@ $(document).ready(function () {
         $("#tableUsersLastLogins").html(response);
       },
     });
+
+    $.ajax({
+      type: "POST",
+      url: "Functions/F_getSales.php",
+      dataType: "text",
+      success: function (response) {
+        $("#tableSales").html(response);
+      },
+    });
   
     $.ajax({
       type: "POST",
@@ -144,5 +153,12 @@ $(document).ready(function () {
 
   }
 });
+
+function hideEditAmount() {
+  var editAmountArea = document.getElementById('editAmount');
+  var confirmAmountArea = document.getElementById('confirmAmount');
+  editAmountArea.style.display = 'none';
+  confirmAmountArea.style.display = 'table-cell';
+}
 
 

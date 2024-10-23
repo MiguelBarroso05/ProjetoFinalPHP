@@ -1,4 +1,4 @@
-<div class="container d-flex justify-content-center mt-5">
+<div class="container d-flex justify-content-center pt-5">
   <form method="post">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>

@@ -1,5 +1,8 @@
 <div style="display: inline-flex; width: 100%;">
-    <div style="display: flex; justify-content: center; margin-top: 2.6%; width: 50%;">
+    <div style="display: flex;flex-direction: column; align-items: center; margin-top: 2.6%; width: 50%;">
+        <div style="width: 50%; padding: 0 0 5px 5px">
+            <h3>Categories</h3>
+        </div>
         <div style="padding: 5px; width: 50%; background-color: black; border-radius: 3px;">
             <table class="table" style="margin-bottom: 0;">
                 <thead>
@@ -24,7 +27,7 @@
             echo '<div class="container  mt-5 ">
             <div class="d-flex " style="flex-direction: column; align-items: center">
                 <div>
-                    <h4>CREATE NEW CATEGORY</h4>
+                    <h4>Create Category</h4>
                 </div>
                 <form style="width: 100%; max-width: 400px;" method="post">
                     <div class="mb-3">

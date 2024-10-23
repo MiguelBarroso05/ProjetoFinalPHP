@@ -12,14 +12,23 @@ function getBasket()
     WHERE b.status = 2 AND u.id = $user_id");
     while ($a = mysqli_fetch_array($q)) {
         echo '<td>' . $a['product'] . '</td>
-            <td>' . $a['amount'] . '</td>
+            <td>
+                <span id="editAmount">' . $a['amount'] . '<a class="editIcon" style="margin-left: 2%;" ><i class="fa-solid fa-pencil" onclick="hideEditAmount()"></i></a></span>
+                <span id="confirmAmount" style="display: none;" >
+                    <input type="number" name="newProductAmount" style="width: 8%;">
+                    <a class="editIcon" style="margin-left: 2%;" href="editAmountBasketProduct.php?product_id=' . $a['product_id'] . '&user_id=' . $user_id . '&basket_id=' . $a['basket_id'] . '" >
+                        <i class="fa-solid fa-check"></i>           
+                    </a>
+                </span>
+            </td>
             <td>' . $a['price'] . '</td>
             <td><a class="editIcon" href="deleteBasketProduct.php?product_id=' . $a['product_id'] . '&user_id=' . $user_id . '&basket_id=' . $a['basket_id'] . '" ><i class="fa-solid fa-trash"></i></a></td>     
             </tr>';
         $total_price += $a['price'];
     }
+    mysqli_query($conn, "UPDATE basket SET total_price = $total_price WHERE status = 2 AND user_id = $user_id");
 
-    $_SESSION['total_price'] = $total_price;
+    return $total_price;
 }
 
 function buyAndDeleteBasket()

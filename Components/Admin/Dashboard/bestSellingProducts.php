@@ -1,5 +1,4 @@
-<div style="display: flex; flex-direction: column; align-items: center; width: 50%; padding: 1%;">
-    <div style=" width: 100%; border-radius: 12px; padding: 1%;">
+<div style=" width: 100%;  padding: 1%;">
     <div style=" width: 80%;">
         <h3 style=>Best Selling Products</h3>
     </div>
@@ -15,6 +14,5 @@
                 <!-- Conteúdo da tabela -->
             </tbody>
         </table>
-    </div>
     </div>
 </div>

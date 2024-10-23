@@ -14,14 +14,13 @@
                 </tr>
             </thead>
             <tbody id="tableBasket">
-                <?php getBasket() ?>
+                <?php $total_price = getBasket() ?>
             </tbody>
         </table>
     </div>
 </div>
 
 <div style="text-align: center;">
-    <?php $total_price = $_SESSION['total_price']; ?>
     <h6><?php echo "Total price: $total_price €" ?></h6>
 </div>
 <div style="display: flex; justify-content: center; width: 60%; margin: 0 auto;">

@@ -1,4 +1,4 @@
-<main style="background-color: #f6f8fb;" >
+<main style="background-color: #f6f8fb; min-height: 73.7vh" >
 	<?php
 
 	@$nav = $_REQUEST['nav'];
@@ -35,6 +35,9 @@
 			break;
 		case 'basket':
 			include 'Components/basket.php';
+			break;
+		case 'adminSales':
+			include 'Components/Admin/manageSales.php';
 			break;
 		default:
 		if (isset($_SESSION["role"]) && $_SESSION["role"] == 1) {

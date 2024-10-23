@@ -23,6 +23,7 @@ function loginUser($email, $password)
             $_SESSION["id"] = $a["id"];
             $_SESSION["email"] =  $a["email"];
             $_SESSION["role"] = $a["role"];
+
             echo '<meta http-equiv="refresh" content="0;url=index.php">';
         }
     }

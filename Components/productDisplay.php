@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container pt-5">
     <div style="text-align: center; margin-bottom: 1%">
         <h1>Products</h1>
     </div>
@@ -14,3 +14,12 @@
         </div>
     </div>
 </div>
+
+
+
+<?php
+if (isset($_POST["addProductToBasket_submit"])) {
+    addProductToBasket($_POST['id'], $_SESSION['id'],$_POST['amount']);
+}
+
+?>

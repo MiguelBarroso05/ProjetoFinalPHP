@@ -2,8 +2,8 @@
   <div style="width: 60%; padding: 0 0 5px 5px;">
     <h3>Sales</h3>
   </div>
-  <div style="padding: 5px; width: 60%; background-color: black; border-radius: 3px;">
-    <table class="table" style="margin-bottom: 0;">
+  <div class="cardTable">
+    <table class="table" style="margin-bottom: 0; border: 1px solid rgba(139, 139, 139, 0.5);">
       <thead>
         <tr>
           <th scope="col">ID</th>

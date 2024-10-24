@@ -3,8 +3,8 @@
         <div style="width: 50%; padding: 0 0 5px 5px">
             <h3>Categories</h3>
         </div>
-        <div style="padding: 5px; width: 50%; background-color: black; border-radius: 3px;">
-            <table class="table" style="margin-bottom: 0;">
+        <div class="cardTable">
+            <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -20,7 +20,7 @@
             </table>
         </div>
     </div>
-    <div style="display: flex; justify-content: center; margin-top: 0.5%; width: 50%;">
+    <div style="display: flex; flex-direction: column; align-content: center; margin-top: 0.5%; width: 50%;">
         <?php if (isset($_GET['id'])) {
             include 'updateCategory.php';
         } else {
@@ -44,5 +44,26 @@
             }
         }
         ?>
+        <div class="container  mt-5 ">
+            <div class="d-flex " style="flex-direction: column; align-items: center">
+                <div>
+                    <h4>Restore Category</h4>
+                </div>
+                <form style="width: 100%; max-width: 400px;" method="post">
+                    <div class="mb-3">
+                        <select name="unactiveCategory" class="form-select">
+                            <?php
+                            getUnactiveCategories();
+                            ?>
+                        </select>
+                    </div>
+
+                    <button name="restoreCategory_submit" type="submit" class="btn btn-primary InteractiveButton">Restore Category</button>
+                    <?php if (isset($_POST["restoreCategory_submit"])) {
+                        restoreCategory($_POST['unactiveCategory']); // Corrigido o acesso ao campo
+                    } ?>
+                </form>
+            </div>
+        </div>
     </div>
 </div>

@@ -10,7 +10,7 @@ foreach ($salesLast30Days as $sale) {
 ?>
 <div  style="width: 100%;">
     <h3>Sales on The Last 30 Days</h3>
-<div style="width: 80%;">
+<div style="width: 80%; margin-top: 5%; margin-left: 10%;">
     <canvas id="salesChart"></canvas>
 </div>
 </div>

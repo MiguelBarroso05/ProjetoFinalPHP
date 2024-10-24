@@ -15,11 +15,8 @@
     </div>
 </div>
 
-
-
 <?php
 if (isset($_POST["addProductToBasket_submit"])) {
     addProductToBasket($_POST['id'], $_SESSION['id'],$_POST['amount']);
 }
-
 ?>

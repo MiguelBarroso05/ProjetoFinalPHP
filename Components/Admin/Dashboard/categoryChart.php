@@ -1,8 +1,8 @@
 <div style="width: 100%; padding: 1%;">
     <h3>Category Sales</h3>
 </div>
-<div>
-    <canvas id="myChart"></canvas>
+<div style="margin-top: 2%;">
+    <canvas id="myChart" style="width: 100%; height: 100%;"></canvas>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

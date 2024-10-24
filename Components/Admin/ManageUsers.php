@@ -18,8 +18,8 @@
 
 <!-- Tabela centrada abaixo dos dropdowns e do botão -->
 <div style="display: flex; justify-content: center; margin-top: 0.5%; ">
-  <div style="padding: 5px; width: 60%; background-color: black; border-radius: 3px;">
-    <table class="table" style="margin-bottom: 0;">
+  <div class="cardTable">
+    <table class="table" style="margin-bottom: 0; border: 1px solid rgba(139, 139, 139, 0.5);">
       <thead>
         <tr>
           <th scope="col">ID</th>

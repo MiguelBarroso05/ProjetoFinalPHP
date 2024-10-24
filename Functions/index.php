@@ -15,12 +15,13 @@ include 'Functions/F_updateCategory.php';
 include 'Functions/F_createProduct.php';
 include 'Functions/F_getCategoriesDropdown.php';
 include 'Functions/F_updateProduct.php';
-//include 'Functions/F_editAmountBasketProduct.php';
 
 include 'Functions/F_getBasket.php';
 include 'Functions/F_addProductToBasket.php';
 include 'Functions/Dashboard/F_getCategorySales.php';
 include 'Functions/Dashboard/F_getLastMonthSales.php';
 
-
+include 'Functions/F_restoreCategory.php';
+include 'Functions/F_getUnactiveProducts.php';
+include 'Functions/F_restoreProduct.php';
 ?>

@@ -9,8 +9,8 @@
 
 .InteractiveButton {
   color: white;
-  background-color: black;
-  border-color: black;
+  background-color: #e7a243;
+  border-color: #e7a243;
 }
 
 .InteractiveButton:hover {
@@ -21,8 +21,8 @@
 
 .InteractiveButton:active {
   color: white !important;
-  background-color: black !important;
-  border-color: black !important;
+  background-color: #e7a243 !important;
+  border-color: #e7a243 !important;
 }
 
 .dashboardContainer {
@@ -45,4 +45,40 @@
   border: 1px solid rgba(139, 139, 139, 0.5);
   width: 50%;
   background-color: white;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.active {
+  font-weight: bold !important;
+}
+
+
+.cardTable {
+  padding: 5px;
+  width: 60%;
+  background-color: rgba(60, 156, 86, 0.1);
+  border-radius: 6px;
+  min-height: 60vh;
+}
+
+.table {
+  margin-bottom: 0;
+  border: 1px solid rgba(21, 54, 50, 1) !important;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.cardTableDashboard {
+  height: fit-content;
+  max-height: 300px;
+  width: 100%;
+  min-height: 0;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+element::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Edge */
 }

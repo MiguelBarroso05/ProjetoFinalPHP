@@ -6,6 +6,24 @@
       <?php getCategoriesDropdown(); ?>
     </select>
   </div>
+  <div style="display: flex; flex-direction: row; height: 38px;">
+    <div class="mb-3" style="margin-right: 10px;">
+      <form method="post">
+        <select name="unactiveProduct" class="form-select">
+          <?php
+          getUnactiveProducts();
+          ?>
+        </select>
+      </div>
+
+        <button name="restoreProduct_submit" type="submit" class="btn btn-primary InteractiveButton"  >Restore Product</button>
+        <?php if (isset($_POST["restoreProduct_submit"])) {
+          restoreProcduct($_POST['unactiveProduct']); // Corrigido o acesso ao campo
+        } ?>
+      </form>
+  </div>
+
+
 
   <!-- Botão de criar novo usuário no lado direito -->
   <div>
@@ -15,8 +33,8 @@
 
 <!-- Tabela centrada abaixo dos dropdowns e do botão -->
 <div style="display: flex; justify-content: center; margin-top: 0.5%; ">
-  <div style="padding: 5px; width: 60%; background-color: black; border-radius: 3px;">
-    <table class="table" style="margin-bottom: 0;">
+  <div class="cardTable">
+    <table class="table">
       <thead>
         <tr>
           <th scope="col">ID</th>
@@ -34,4 +52,3 @@
     </table>
   </div>
 </div>
-

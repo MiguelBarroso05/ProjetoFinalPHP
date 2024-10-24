@@ -17,11 +17,19 @@
                 <?php $total_price = getBasket() ?>
             </tbody>
         </table>
+        <?php
+        if (isset($_SESSION['invalidAmount']) && $_SESSION['invalidAmount'] != null) {
+            echo '<script>setTimeout(function() { alert("Avalable Amount: " + ' . $_SESSION['invalidAmount'] . '); }, 100);</script>';
+            $_SESSION['invalidAmount'] = null;
+        }
+        ?>
     </div>
 </div>
 
+
+
 <div style="text-align: center;">
-    <h6><?php echo "Total price: $total_price €" ?></h6>
+    <h6><?php echo "Total price: $total_price $" ?></h6>
 </div>
 <div style="display: flex; justify-content: center; width: 60%; margin: 0 auto;">
     <?php buyAndDeleteBasket() ?>

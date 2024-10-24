@@ -19,14 +19,14 @@ function getBasket()
               <input type="hidden" name="product_id" value="' . $a['product_id'] . '">
               <input type="hidden" name="user_id" value="' . $user_id . '">
               <input type="hidden" name="basket_id" value="' . $a['basket_id'] . '">
-              <input type="number" name="newAmount" value="' . $a['amount'] . '" min="1" max="' . $a['p.amount'] . '" style="width: 30%;">
+              <input type="number" name="newAmount" value="' . $a['amount'] . '" style="width: 30%;">
               <button type="submit" class="editIcon" name="updateAmount_submit" style="margin-left: 2%; border: none; background: none;">
                   <i class="fa-solid fa-check"></i>
               </button>
           </form>
         </span>
       </td>
-      <td>' . $a['price'] . '</td>
+      <td>' . $a['price'] . ' $</td>
       <td><a class="editIcon" href="deleteBasketProduct.php?product_id=' . $a['product_id'] . '&user_id=' . $user_id . '&basket_id=' . $a['basket_id'] . '"><i class="fa-solid fa-trash"></i></a></td>
     </tr>';
         $total_price += $a['price'];

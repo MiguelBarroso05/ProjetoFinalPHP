@@ -1,8 +1,8 @@
 
-<nav class="navbar navbar-expand-lg " style="background-color: #f1f1f1">
+<nav class="navbar navbar-expand-lg " style="background-color: rgba(21, 54, 50, 1);">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="./images/logo.png" width="" height="55">
+    <a class="navbar-brand" href="index.php">
+      <img src="./images/HerdadeSol.png" width="" height="55" style="border-radius: 100px;">
     </a>
 
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -47,9 +47,9 @@
       <div class="ms-auto " style="margin-right: 2%; font-size: 20px; display: inline-flex">
         <?php
         if (isset($_SESSION["email"])) {
-          echo ' <a class="nav-link" href="?nav=updateUser&id=' . $_SESSION["id"] . '" style="margin-right: 25%;"><i class="fa-regular fa-user"></i></a>';
+          echo ' <a class="nav-link" href="?nav=updateUser&id=' . $_SESSION["id"] . '" style="margin-right: 20px;"><i class="fa-regular fa-user"></i></a>';
           if (isset($_SESSION["role"]) && $_SESSION["role"] != 1) {
-            echo '<a class="nav-link" href="?nav=basket&id=' . $_SESSION["id"] . '" style="margin-right: 25%;"><i class="fa-solid fa-basket-shopping"></i></a>';
+            echo '<a class="nav-link" href="?nav=basket&id=' . $_SESSION["id"] . '" style="margin-right: 20px;"><i class="fa-solid fa-basket-shopping"></i></a>';
           }
           echo ' <a class="nav-link" href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>';
         } else {

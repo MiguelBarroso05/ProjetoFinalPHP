@@ -4,7 +4,7 @@ include '../Connections/config.php';
 if (isset($_REQUEST["category_id_list"]) && $_REQUEST["category_id_list"] != -1) {
     $category_id = $_REQUEST["category_id_list"];
     $q = mysqli_query($conn, "SELECT p.*, c.name as category FROM product p 
-                             join category c on c.id = p.category_id
+                             JOIN category c on c.id = p.category_id
                              WHERE category_id = '$category_id' AND p.amount > 0");
 } else {
     $q = mysqli_query($conn, "SELECT * FROM product WHERE amount > 0");

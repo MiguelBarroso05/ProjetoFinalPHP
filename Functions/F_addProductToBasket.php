@@ -2,7 +2,6 @@
 
 function addProductToBasket($product_id, $user_id, $amount)
 {
-    echo '<script>console.log("addProductToBasket called");</script>';
     if (isset($user_id) && isset($amount) && isset($product_id)) {
         include 'Connections/config.php';
         $q_amount = mysqli_query($conn, "SELECT amount FROM product WHERE id = '$product_id'");

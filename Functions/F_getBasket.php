@@ -12,18 +12,23 @@ function getBasket()
     WHERE b.status = 2 AND u.id = $user_id");
     while ($a = mysqli_fetch_array($q)) {
         echo '<td>' . $a['product'] . '</td>
-            <td>
-                <span id="editAmount">' . $a['amount'] . '<a class="editIcon" style="margin-left: 2%;" ><i class="fa-solid fa-pencil" onclick="hideEditAmount()"></i></a></span>
-                <span id="confirmAmount" style="display: none;" >
-                    <input type="number" name="newProductAmount" style="width: 8%;">
-                    <a class="editIcon" style="margin-left: 2%;" href="editAmountBasketProduct.php?product_id=' . $a['product_id'] . '&user_id=' . $user_id . '&basket_id=' . $a['basket_id'] . '" >
-                        <i class="fa-solid fa-check"></i>           
-                    </a>
-                </span>
-            </td>
-            <td>' . $a['price'] . '</td>
-            <td><a class="editIcon" href="deleteBasketProduct.php?product_id=' . $a['product_id'] . '&user_id=' . $user_id . '&basket_id=' . $a['basket_id'] . '" ><i class="fa-solid fa-trash"></i></a></td>     
-            </tr>';
+      <td>
+        <span id="editAmount">' . $a['amount'] . '<a class="editIcon" style="margin-left: 2%; cursor: pointer;" ><i class="fa-solid fa-pencil" onclick="hideEditAmount()"></i></a></span>
+        <span id="confirmAmount" style="display: none;">
+          <form id="AmountForm" method="POST" action="Functions/F_editAmountBasketProduct.php">
+              <input type="hidden" name="product_id" value="' . $a['product_id'] . '">
+              <input type="hidden" name="user_id" value="' . $user_id . '">
+              <input type="hidden" name="basket_id" value="' . $a['basket_id'] . '">
+              <input type="number" name="newAmount" value="' . $a['amount'] . '" min="1" max="' . $a['p.amount'] . '" style="width: 30%;">
+              <button type="submit" class="editIcon" name="updateAmount_submit" style="margin-left: 2%; border: none; background: none;">
+                  <i class="fa-solid fa-check"></i>
+              </button>
+          </form>
+        </span>
+      </td>
+      <td>' . $a['price'] . '</td>
+      <td><a class="editIcon" href="deleteBasketProduct.php?product_id=' . $a['product_id'] . '&user_id=' . $user_id . '&basket_id=' . $a['basket_id'] . '"><i class="fa-solid fa-trash"></i></a></td>
+    </tr>';
         $total_price += $a['price'];
     }
     mysqli_query($conn, "UPDATE basket SET total_price = $total_price WHERE status = 2 AND user_id = $user_id");

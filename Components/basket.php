@@ -3,7 +3,7 @@
 </div>
 
 <div style="display: flex; justify-content: space-between; width: 60%; margin: 2% auto;">
-    <div style="padding: 5px; width: 100%; background-color: black; border-radius: 3px;">
+    <div class="cardTable" style="padding: 5px; width: 100%; min-height:0">
         <table class="table" style="margin-bottom: 0;">
             <thead>
                 <tr>

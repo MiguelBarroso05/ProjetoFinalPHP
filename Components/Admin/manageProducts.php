@@ -17,7 +17,7 @@
       </div>
 
         <button name="restoreProduct_submit" type="submit" class="btn btn-primary InteractiveButton"  >Restore Product</button>
-        <?php if (isset($_POST["restoreProduct_submit"])) {
+    <?php if (isset($_POST["restoreProduct_submit"]) && isset($_POST['unactiveProduct'])) {
           restoreProcduct($_POST['unactiveProduct']); // Corrigido o acesso ao campo
         } ?>
       </form>

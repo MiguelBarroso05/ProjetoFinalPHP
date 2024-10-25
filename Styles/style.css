@@ -51,6 +51,10 @@
   color: white !important;
 }
 
+.nav-link.active {
+  font-weight: bold;
+}
+
 .active {
   font-weight: bold !important;
 }
@@ -61,7 +65,16 @@
   width: 60%;
   background-color: rgba(60, 156, 86, 0.1);
   border-radius: 6px;
-  min-height: 60vh;
+  min-height: 70vh;
+  max-height: 70vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.cardHomepage{
+  padding: 15px;
+  background-color: rgba(60, 156, 86, 0.1);
+  border-radius: 6px;
+  margin-bottom: 10px;
 }
 
 .table {
@@ -75,10 +88,6 @@
   max-height: 300px;
   width: 100%;
   min-height: 0;
-  overflow-y: scroll;
-  scrollbar-width: none;
+
 }
 
-element::-webkit-scrollbar {
-  display: none; /* Chrome, Safari e Edge */
-}

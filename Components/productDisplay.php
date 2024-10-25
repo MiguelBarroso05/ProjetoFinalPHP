@@ -9,7 +9,7 @@
                 <?php getCategoriesDropdown(); ?>
             </select>
         </div>
-        <div id="displayProducts">
+        <div id="displayProducts" class="cardHomepage">
             <!-- Products to show-->
         </div>
     </div>

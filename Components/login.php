@@ -9,7 +9,7 @@
       <label for="exampleInputPassword1" class="form-label">Password</label>
       <input type="password" name="password" class="form-control" id="exampleInputPassword1">
     </div>
-    <button name="login_submit" type="submit" class="btn btn-primary">Submit</button>
+    <button name="login_submit" type="submit" class="btn btn-primary InteractiveButton">Submit</button>
     <a href="?nav=register" class="btn btn-secondary">Register</a>
   </form>
 </div>

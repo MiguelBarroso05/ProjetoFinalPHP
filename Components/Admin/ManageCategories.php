@@ -59,7 +59,7 @@
                     </div>
 
                     <button name="restoreCategory_submit" type="submit" class="btn btn-primary InteractiveButton">Restore Category</button>
-                    <?php if (isset($_POST["restoreCategory_submit"])) {
+                    <?php if (isset($_POST["restoreCategory_submit"]) && isset($_POST['unactiveCategory'])) {
                         restoreCategory($_POST['unactiveCategory']); // Corrigido o acesso ao campo
                     } ?>
                 </form>

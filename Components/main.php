@@ -1,4 +1,4 @@
-<main style="background-color: #f6f8fb; min-height: 73.7vh" >
+<main style="background-color: #f6f8fb; min-height: 85.1vh" >
 	<?php
 
 	@$nav = $_REQUEST['nav'];
@@ -35,6 +35,9 @@
 			break;
 		case 'basket':
 			include 'Components/basket.php';
+			break;
+		case 'userOrders':
+			include 'Components/orderHistory.php';
 			break;
 		case 'adminSales':
 			include 'Components/Admin/manageSales.php';

@@ -4,10 +4,16 @@ function addProductToBasket($product_id, $user_id, $amount)
 {
     if (isset($user_id) && isset($amount) && isset($product_id)) {
         include 'Connections/config.php';
-        $q_amount = mysqli_query($conn, "SELECT * FROM product p WHERE p.id = $product_id");
+        $q_amount = mysqli_query($conn, "SELECT amount FROM product p WHERE p.id = $product_id");
         $a_amount = mysqli_fetch_array($q_amount);
-
-        $productAmount = $a_amount["amount"];
+        $q_amountInBasket = mysqli_query($conn, "SELECT amount FROM product_basket WHERE product_id = $product_id AND basket_id IN (SELECT id FROM basket WHERE user_id = '$user_id' AND status = 2)");
+        $a_amountInBasket = mysqli_fetch_array($q_amountInBasket);
+        if(mysqli_num_rows($q_amountInBasket) > 0){
+            $productAmount = $a_amount["amount"] - $a_amountInBasket["amount"];
+        }
+        else {
+            $productAmount = $a_amount["amount"];
+        }
 
         if ($amount <= $productAmount) {
             $checkBasketExists = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM basket WHERE user_id = '$user_id' AND status = 2"));
@@ -36,7 +42,7 @@ function addProductToBasket($product_id, $user_id, $amount)
                 }
             }
         } else {
-            echo "Not enough amount";
+            echo '<script>setTimeout(function() { alert("Avalable Amount: " + ' . $productAmount . '); }, 100);</script>';
         }
     }
 }

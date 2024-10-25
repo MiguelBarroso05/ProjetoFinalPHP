@@ -1,8 +1,8 @@
 <?php
 function createProduct($name, $category_id, $price, $description, $image, $amount)
 {
-	if ($name == "" || $category_id == "" || $price == "" || $image == "" || $amount == "") {
-		echo "Please fill in all the fields";
+	if ($name == "" || $category_id == "" || $price == "" || $image == "" || $amount == "" || $_FILES['image']['size'] == 0) {
+		echo '<script>setTimeout(function() { alert("Plese fill in all the fields"); }, 100);</script>';
 	} else {
 		include 'Connections/config.php';
 		$name = mysqli_real_escape_string($conn, $name);
@@ -13,7 +13,8 @@ function createProduct($name, $category_id, $price, $description, $image, $amoun
 		$image = round(microtime(true)) . '.' . end($imageExtension);
 		$checkProductAlreadyCreated = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM product WHERE name = '$name' AND category_id = '$category_id'"));
 		if ($checkProductAlreadyCreated > 0) {
-			echo 'Product already registered';
+			echo '<script>setTimeout(function() { alert("Product already created"); }, 100);</script>';
+
 		} else {
 			move_uploaded_file($_FILES["image"]["tmp_name"], "Images/products/" . $image);
 			mysqli_query($conn, "INSERT INTO product (name, category_id, price, description, image, amount) VALUES ( '$name', '$category_id', '$price', '$description', '$image', '$amount')");

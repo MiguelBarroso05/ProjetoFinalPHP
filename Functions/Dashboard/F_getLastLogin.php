@@ -2,7 +2,7 @@
 
 include '../../Connections/config.php';
 
-$q = mysqli_query($conn, "SELECT * FROM user Order By last_login DESC LIMIT 5");
+$q = mysqli_query($conn, "SELECT * FROM user Order By last_login DESC");
 
 while ($a = mysqli_fetch_array($q)) {
     echo '<tr>

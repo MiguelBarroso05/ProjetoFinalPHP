@@ -1,4 +1,8 @@
-<?php $id = $_REQUEST['id'];
+<?php
+if (isset($_SESSION['role'])) {
+    checkrole($_SESSION['role']);
+}   
+ $id = $_REQUEST['id'];
 
 include 'Connections/config.php';
 

@@ -1,3 +1,9 @@
+<?php
+if (isset($_SESSION['role'])) {
+    checkrole($_SESSION['role']);
+}   
+?>
+
 <div style="display: flex; justify-content: space-between; width: 60%; margin: 0 auto; padding-top: 2%;">
   <!-- Dropdowns de pesquisa no lado esquerdo -->
   <div style="display: flex;">

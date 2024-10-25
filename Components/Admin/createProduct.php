@@ -1,3 +1,9 @@
+<?php
+if (isset($_SESSION['role'])) {
+    checkrole($_SESSION['role']);
+}   
+?>
+
 <div class="container  mt-5 ">
     <div class="d-flex justify-content-center">
         <form style="width: 100%; max-width: 400px;" method="post" enctype="multipart/form-data">

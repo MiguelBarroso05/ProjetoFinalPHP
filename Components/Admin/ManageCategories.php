@@ -1,3 +1,9 @@
+<?php
+if (isset($_SESSION['role'])) {
+    checkrole($_SESSION['role']);
+}   
+?>
+
 <div style="display: inline-flex; width: 100%;">
     <div style="display: flex;flex-direction: column; align-items: center; margin-top: 2.6%; width: 50%;">
         <div style="width: 50%; padding: 0 0 5px 5px">

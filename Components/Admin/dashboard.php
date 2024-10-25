@@ -1,3 +1,9 @@
+<?php
+if (isset($_SESSION['role'])) {
+    checkrole($_SESSION['role']);
+}   
+?>
+
 <div class="dashboardContainer pt-2" >
     <div class="dashboardRow">
     <div class="dashboardCell">

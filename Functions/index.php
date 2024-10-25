@@ -24,4 +24,5 @@ include 'Functions/Dashboard/F_getLastMonthSales.php';
 include 'Functions/F_restoreCategory.php';
 include 'Functions/F_getUnactiveProducts.php';
 include 'Functions/F_restoreProduct.php';
+include 'Functions/F_checkrole.php';
 ?>

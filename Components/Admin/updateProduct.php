@@ -1,4 +1,8 @@
 <?php
+if (isset($_SESSION['role'])) {
+    checkrole($_SESSION['role']);
+}   
+
 include 'Connections/config.php';
 
 if (isset($_REQUEST['id'])) {

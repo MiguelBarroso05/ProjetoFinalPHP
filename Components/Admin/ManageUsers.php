@@ -35,6 +35,7 @@ if (isset($_SESSION['role'])) {
           <th scope="col">District</th>
           <th scope="col">County</th>
           <th scope="col">Role</th>
+          <th scope="col">Ative</th>
           <th scope="col"></th>
           <th scope="col"></th>
         </tr>
